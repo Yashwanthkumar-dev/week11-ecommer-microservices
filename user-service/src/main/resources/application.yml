@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: user-service
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/user_service_db
+    username: postgres
+    password: Yashwanth@13
+
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+instance:
+  prefer-ip-address: ture
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+
+server:
+  port: 8083

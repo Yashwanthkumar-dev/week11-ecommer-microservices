@@ -85,6 +85,10 @@ public class OrderService {
                             return responseDto;
                         })
                 .toList();
+        if (response.isEmpty()) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND)
+                    .body("no order was placeded");
+        }
 
         return ResponseEntity.status(HttpStatus.OK).body(response);
     }
